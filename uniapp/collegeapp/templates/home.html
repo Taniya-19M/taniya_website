@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <style>
+        body {
+            {% comment %} background-color: lightpink; {% endcomment %}
+            background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
+            font-family: Arial, sans-serif;
+            {% comment %} margin: 0; {% endcomment %}
+            margin-top: 40px;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            {% comment %} height: 100vh; {% endcomment %}
+        }
+
+        h2 {
+            color: green;
+        }
+
+        p {
+            color: #333;
+            font-size: 16px;
+            text-align: justify;
+            max-width: 800px;
+            margin: 20px 0;
+        }
+
+
+
+
+
+
+
+        .login-form, .signup-form, .contact-form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .login-form input, .signup-form input, .contact-form input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+
+        .login-form button, .signup-form button, .contact-form button {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+
+
+
+
+
+
+
+        .navbar {
+            background-color: black;
+            color: white;
+            padding: 10px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            margin-right: 20px;
+        }
+
+        /* Button on the right side of the navbar */
+        .navbar button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            margin-right: 15px;
+            border-radius: 15px;
+        }
+
+
+            .hero-image img {
+                overflow :hidden;
+                width: 100%;
+                height: auto;
+            }
+            
+            
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <a href="#hero" class="logo">
+                <img   src="https://clipground.com/images/random-logo-clipart-1.png" width= "300px", height = "300px" alt="Envision College Logo">
+            </a>
+        </div>
+    </header>
+
+    <div class="navbar">
+        <div class="navbar-links">
+            <a href="/home">Home</a>
+            <a href="/about">About Us</a>
+            <a href="/services">Courses</a>
+            <a href="/contact">Contact</a>
+        </div>
+        <button><a href="/login">Login/SignUp</a></button>
+    </div>
+
+    {% comment %} <div class="login-form">
+        <h3>Login</h3>
+        <input type="text" placeholder="Username">
+        <input type="password" placeholder="Password">
+        <button>Login</button>
+    </div> {% endcomment %}
+
+
+    <!-- Signup form -->
+    {% comment %} <div class="signup-form">
+        <h3>Sign Up</h3>
+        <input type="text" placeholder="Full Name">
+        <input type="text" placeholder="Email">
+        <input type="password" placeholder="Password">
+        <button>Sign Up</button>
+    </div> {% endcomment %}
+
+    {% comment %} <div class="contact-form">
+        <h3>Contact Us</h3>
+        <input type="text" placeholder="Your Name">
+        <input type="text" placeholder="Your Email">
+        <textarea placeholder="Your Message"></textarea>
+        <button>Submit</button>
+    </div> {% endcomment %}
+
+    <section id="hero" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Envision College</h1>
+                <h2>Empowering minds, shaping futures.</h2>
+                <a href="#about-us" class="btn">Explore Our College</a>
+            </div>
+            <div class="hero-image">
+                <img src="images/hero-image.jpg" alt="Envision College Campus">
+            </div>
+        </div>
+    </section>
+
+    <section id="about-us" class="about-us">
+        <div class="container">
+            <h2>About Us</h2>
+            <img class ="hero-image" src="https://www.ivyboost.com/wp-content/uploads/2017/07/hero.jpg" width="400px" height="auto" alt="hero">
+
+            
+            <p>Envision College is a premier educational institution dedicated to providing students with the knowledge, skills, and values necessary to succeed in a dynamic global society. Founded in 2005, we have been committed to fostering a diverse and inclusive learning environment where students can explore their passions, develop their talents, and prepare for their future careers.</p>
+            <p>Our highly qualified faculty is passionate about their fields and dedicated to providing students with an engaging and personalized learning experience. We offer a wide range of undergraduate and graduate programs, including Business Administration, Computer Science, Engineering, Education. Our programs are designed to meet the needs of the modern workforce and prepare students for successful careers in their chosen fields.</p>
+            <p>Envision College is accredited by the Accrediting Council for Business Schools and Programs (ACBSP) and the Commission on Colleges of the Southern Association of Colleges and Schools (SACS). We are proud to be a member of the Association of Colleges and Universities of the West (ACUW).</p>
+            <a href="#" class="btn">Read More About Us</a>
+        </div>
+    </section>
+
+    <section id="programs" class="programs">
+        <div class="container">
+            <h2>Our Programs</h2>
+            <div class="row">
+                <div class="program-card col-md-6 col-lg-4">
+                    <h3>Business Administration</h3>
+                    <p>Our Business Administration program is designed to prepare students for careers in a variety of business fields, including accounting, finance, marketing, and management.</p>
+                    <a href="#" class="btn">Learn More</a>
+                </div>
+                <div class="program-card col-md-6 col-lg-4">
+                    <h3>Computer Science</h3>
+                    <p>Our Computer Science program is designed to prepare students for careers in software development, cybersecurity, and other emerging technologies.</p>
+                    <a href="#" class="btn">Learn More</a>
+                </div>
+                <div class="program-card col-md-6 col-lg-4">
+                    <h3>Engineering</h3>
+                    <p>Our Engineering program is designed to prepare students for careers in civil engineering, mechanical engineering, electrical engineering, and other engineering fields.</p>
+                    <a href="#" class="btn">Learn More</a>
+                </div>
+    </section>
+</html>
